@@ -21,10 +21,13 @@ export class View {
     context = this.canvas.getContext('2d');
 
     preview () {
-        const previewDiv = document.createElement('div');
-        previewDiv.classList.add('preview');
-        previewDiv.innerHTML = "Press Enter to start a game";
-        document.getElementsByTagName("body")[0].appendChild(previewDiv);
+        const howToStartMsg = document.createElement('div');
+        const howToPlayMsg = document.createElement('div');
+
+        howToPlayMsg.classList.add('preview');
+        howToPlayMsg.innerHTML = `Press <b>Enter</b> to start a game <br> <b>Rotate</b> tetrominos using the <b>Up Arrow</b> key.
+            <br> <b>Move</b> tetrominos using the <b>Left, Right, Down Arrow</b> keys.`;
+        document.getElementsByTagName("body")[0].appendChild(howToPlayMsg);
 
     }
     
